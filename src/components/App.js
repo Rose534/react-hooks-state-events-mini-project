@@ -9,6 +9,8 @@ import { CATEGORIES, TASKS } from "../data";
 console.log("Here's the data you're working with");
 console.log({ CATEGORIES, TASKS });
 
+
+
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredTasks, setFilteredTasks] = useState(TASKS);
