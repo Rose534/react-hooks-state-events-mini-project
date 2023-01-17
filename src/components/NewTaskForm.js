@@ -5,7 +5,6 @@ function NewTaskForm({ categories, onTaskFormSubmit }) {
   const [category, setCategory] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('form submitted');
     onTaskFormSubmit({ text, category });
   };
   return (
@@ -28,4 +27,5 @@ function NewTaskForm({ categories, onTaskFormSubmit }) {
     </form>
   );
 }
+
 export default NewTaskForm;
