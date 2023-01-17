@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
-function NewTaskForm({ categories, onSubmit }) {
+function NewTaskForm({ categories, onTaskFormSubmit }) {
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ text, category });
+    console.log('form submitted');
+    onTaskFormSubmit({ text, category });
   };
   return (
-    <form className="new-task-form" onSubmit={handleSubmit}>
+    <form className="new-task-form" onSubmit={handleSubmit.bind(this)}>
       <label>
         Details
         <input type="text" name="text" value={text} onChange={e => setText(e.target.value)} />
